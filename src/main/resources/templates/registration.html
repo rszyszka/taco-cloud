@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org" lang="pl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Taco Cloud</title>
+    <link rel="stylesheet" th:href="@{/styles.css}"/>
+</head>
+
+<body>
+<h1>Rejestracja</h1>
+<a th:href="@{/}"><img th:src="@{/images/taco-cloud.png}"/></a>
+
+<p>Masz już konto? Kliknij <a th:href="@{/login}">tutaj</a> aby się zalogować.</p>
+
+<form class="table" method="POST" th:action="@{/register}" id="registerForm">
+    <p>
+        <label for="username">Nazwa użytkownika: </label>
+        <input id="username" type="text" name="username"/>
+    </p>
+
+    <p>
+        <label for="password">Hasło: </label>
+        <input id="password" type="password" name="password"/>
+    </p>
+
+    <p>
+        <label for="confirm">Potwierdź hasło: </label>
+        <input id="confirm" type="password" name="confirm"/><br/>
+    </p>
+    <p>
+        <label for="fullName">Pełne imię i nazwisko: </label>
+        <input id="fullName" type="text" name="fullName"/><br/>
+    </p>
+    <p>
+        <label for="street">Ulica: </label>
+        <input id="street" type="text" name="street"/><br/>
+    </p>
+    <p>
+        <label for="city">Miejscowość: </label>
+        <input id="city" type="text" name="city"/><br/>
+    </p>
+    <p>
+        <label for="zip">Kod pocztowy: </label>
+        <input id="zip" type="text" name="zip"/><br/>
+    </p>
+    <p>
+        <label for="phoneNumber">Numer telefonu: </label>
+        <input id="phoneNumber" type="text" name="phoneNumber"/><br/>
+    </p>
+    <p>
+        <input type="submit" value="Zarejestruj"/>
+    </p>
+</form>
+
+</body>
+</html>
